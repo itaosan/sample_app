@@ -7,11 +7,18 @@ gem 'rails', '4.1.4'
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+end
+
+group :development, :test do
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 # Use SCSS for stylesheets
