@@ -17,9 +17,14 @@ describe "静的ページ" do
       expect(page).to have_content('Sample App')
     end
 
-    it "should have the right title" do
+    it "should have the base title" do
       visit '/static_pages/home'
-      expect(page).to have_title("#{base_title} | Home")
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
+    end
+
+    it "should not have a custom page title" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title('| Home')
     end
   end
 
@@ -55,7 +60,7 @@ describe "静的ページ" do
 
     it "should have the right title" do
       visit '/static_pages/contact'
-      expect(page).to have_title("#{base_title} | Contact2")
+      expect(page).to have_title("#{base_title} | Contact")
     end
   end
 
