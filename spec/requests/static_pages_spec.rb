@@ -1,68 +1,52 @@
-require 'rails_helper'
+require 'spec_helper'
 
-# RSpec.describe "StaticPages", :type => :request do
-#   describe "GET /static_pages" do
-#     it "works! (now write some real specs)" do
-#       get static_pages_index_path
-#       expect(response.status).to be(200)
-#     end
-#   end
-# end
-describe "静的ページ" do
-  let(:base_title) { "Ruby on Rails Tutorial Sample App" }
+describe "Static pages" do
 
-  describe "Home" do
-    it "Sample Appと言う文字列がある" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Sample App')
-    end
+  subject { page }
+  describe "Home page" do
+    before { visit root_path }
 
-    it "should have the base title" do
-      visit '/static_pages/home'
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App")
-    end
-
-    it "should not have a custom page title" do
-      visit '/static_pages/home'
-      expect(page).not_to have_title('| Home')
-    end
+    it { should have_content('Sample App') }
+    it { should have_title("Ruby on Rails Tutorial Sample App") }
+    it { should_not have_title('| Home') }
   end
 
-  describe "help" do
-    it "Helpと言う文字列がある" do
-      visit '/static_pages/help'
+  describe "Help page" do
+
+    it "should have the h1 'Help'" do
+      visit help_path
       expect(page).to have_content('Help')
     end
-    it "should have the right title" do
-      visit '/static_pages/help'
-      expect(page).to have_title("#{base_title} | Help")
+
+    it "should have the title 'Help'" do
+      visit help_path
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Help")
     end
   end
 
+  describe "About page" do
 
-  describe "about" do
-    it "About Usと言う文字列がある" do
-      visit '/static_pages/about'
+    it "should have the h1 'About Us'" do
+      visit about_path
       expect(page).to have_content('About Us')
     end
 
-    it "should have the right title" do
-      visit '/static_pages/about'
-      expect(page).to have_title("#{base_title} | About Us")
+    it "should have the title 'About Us'" do
+      visit about_path
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
     end
   end
 
-  describe "contact" do
-    it "Contactと言う文字列がある" do
-      visit '/static_pages/contact'
+  describe "Contact page" do
+
+    it "should have the content 'Contact'" do
+      visit contact_path
       expect(page).to have_content('Contact')
     end
 
-    it "should have the right title" do
-      visit '/static_pages/contact'
-      expect(page).to have_title("#{base_title} | Contact")
+    it "should have the title 'Contact'" do
+      visit contact_path
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact")
     end
   end
-
-
 end
