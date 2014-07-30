@@ -1,0 +1,21 @@
+[33m83b5e99[m HEAD@{0}: checkout: moving from filling-in-layout to master
+[33m83b5e99[m HEAD@{1}: checkout: moving from master to filling-in-layout
+[33m83b5e99[m HEAD@{2}: merge filling-in-layout: Fast-forward
+[33me853946[m HEAD@{3}: checkout: moving from filling-in-layout to master
+[33m83b5e99[m HEAD@{4}: commit: Finish layout and routes
+[33me853946[m HEAD@{5}: checkout: moving from master to filling-in-layout
+[33me853946[m HEAD@{6}: commit: add a full_titile helper
+[33m5aa5a46[m HEAD@{7}: checkout: moving from static-pages to master
+[33m5aa5a46[m HEAD@{8}: checkout: moving from master to static-pages
+[33m5aa5a46[m HEAD@{9}: merge static-pages: Fast-forward
+[33me2ae932[m HEAD@{10}: checkout: moving from static-pages to master
+[33m5aa5a46[m HEAD@{11}: commit: Chapter 3-27 -2
+[33me2ae932[m HEAD@{12}: checkout: moving from master to static-pages
+[33me2ae932[m HEAD@{13}: merge static-pages: Fast-forward
+[33m775d4e4[m HEAD@{14}: checkout: moving from static-pages to master
+[33me2ae932[m HEAD@{15}: commit: Chapter 3-27
+[33mcfced00[m HEAD@{16}: commit: Add a StaticPages controller
+[33m775d4e4[m HEAD@{17}: checkout: moving from master to static-pages
+[33m775d4e4[m HEAD@{18}: commit: README
+[33m98db3e4[m HEAD@{19}: commit: Improve the README
+[33md4b38cf[m HEAD@{20}: commit (initial): initial commit
